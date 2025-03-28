@@ -9,11 +9,15 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Manya@111",
-  database: "portfolio"
+  host: "mysql-3e0ff125-manyagupta2210-c8ec.k.aivencloud.com",
+  user: "avnadmin",
+  password: "AVNS_rzxMhW04bIeDywsN0B0",
+  database: "defaultdb",
+  port: 22508
 });
+
+
+
 
 db.connect((err) => {
   if (err) {

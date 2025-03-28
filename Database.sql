@@ -7,6 +7,6 @@ CREATE TABLE contacts (
   first_name VARCHAR(255),
   surname VARCHAR(255),
   phone VARCHAR(20)UNIQUE,
-  email VARCHAR(255)UNIQUE,
+  email VARCHAR(255)UNIQUE
 );
 USE portfolio;
