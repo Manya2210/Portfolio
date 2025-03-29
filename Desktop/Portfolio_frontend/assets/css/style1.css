@@ -1,0 +1,122 @@
+html, body{
+    margin: 5px;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url("../laptopimg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.nav-bar{
+    border: 2px solid white;
+    background-color: rgba(245, 245, 245, 0.295);
+    font-size: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 20px;
+    list-style-type: none;
+}
+
+.logo{
+   color: rgb(139, 35, 139); 
+}
+
+#navbox {
+width: 200px;
+padding: 20px;
+background-color: rgb(151, 181, 190);
+border: 1px solid #333;
+margin: 20px auto;
+}
+
+.nav-links{
+    font-weight: bold;
+    margin-top: -60px;
+    padding: 12px 20px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center; 
+    text-decoration: none;
+}
+
+.nav-links li {
+    margin-right: 30px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+p{
+    margin-top: 5%;
+    font-size: 100%;
+    font-weight: bold;  
+}
+
+#p1,#p3{
+    margin-top:8%;
+    text-align:left;
+    color:rgb(139, 35, 139);
+}
+
+#p2{
+    margin-top:-3%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid transparent;
+    text-align:left;
+    color: skyblue;
+}
+
+#p4{  
+    margin-top:-4%;
+    text-align:left;
+    color:rgb(62, 4, 77);
+}
+#b1{
+    margin-top:-4%;
+    float:left;
+}
+
+.toggle-btn{
+    position: absolute; 
+    bottom: 87%; 
+    right: 20px;   
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(139, 35, 139);
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+button {
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(139, 35, 139);;
+    color:white;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    }
+  
+    #home {
+        background: none; 
+    }
+      

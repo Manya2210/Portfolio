@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style3.css">
+</head>
+<body>
+    <h1>Contact Me</h1>
+    <div class ="form-container">
+    <form action="/submit" method="POST" id="contactForm">
+        <div class ="name">
+        <label for "Name" ></label>
+        <input type="text"  name ="first_name" placeholder="First name">
+        <label for "Name" ></label>
+        <input type="text"  name="surname" placeholder="Surname" >
+    </div>
+        <br>
+        <div class ="phone">
+        <label for ="phone" ></label>
+        <input type="tel"  name="phone" placeholder="Enter your phone number">
+        <label for ="email" ></label>
+        <input type="email" name="email" placeholder ="Enter your email">
+    </div>
+        <br>
+        <div class ="message">
+        <label for ="message" placeholder = Write a message...></label>
+        <input type="message"  name="message" placeholder = Write a message...>
+    </div>
+    <div class="container">
+    <button>Send Message</button>
+</div>
+    </form>
+</div>
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+
+        fetch("http://localhost:3000/submit-form", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => alert(data.message))
+        .catch(error => console.error("Error:", error));
+    });
+</script>
+</body>
+</html>
