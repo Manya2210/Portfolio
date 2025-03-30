@@ -1,13 +1,15 @@
+require("dotenv").config();
 const express = require("express");
 const mysql = require("mysql2");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+
 const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
-
+console.log(process.env.DB_HOST, "print");
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -23,6 +25,7 @@ db.connect((err) => {
   }
   console.log("Connected to MySQL database.");
 });
+
 
 app.post("/submit-form", (req, res) => {
   const {first_name, surname, phone, email } = req.body;
